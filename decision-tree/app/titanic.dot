@@ -1,0 +1,16 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="humidity <= 119.5\nentropy = 0.1414\nsamples = 10000\nvalue = [200, 9800]"] ;
+1 [label="entropy = 0.0\nsamples = 6927\nvalue = [0, 6927]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="temperature <= 37.55\nentropy = 0.3473\nsamples = 3073\nvalue = [200, 2873]"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label="temperature <= 36.45\nentropy = 0.6168\nsamples = 1309\nvalue = [200, 1109]"] ;
+2 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 753\nvalue = [0, 753]"] ;
+3 -> 4 ;
+5 [label="entropy = 0.9424\nsamples = 556\nvalue = [200, 356]"] ;
+3 -> 5 ;
+6 [label="entropy = 0.0\nsamples = 1764\nvalue = [0, 1764]"] ;
+2 -> 6 ;
+}
